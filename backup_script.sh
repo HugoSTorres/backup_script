@@ -18,6 +18,7 @@
 # License along with this program.  If not, see 
 # <http://www.gnu.org/licenses/>.
 
+backupsrc=$HOME/*
 backupdir=$HOME/Backup
 backupdate=$(date +%m)-$(date +%d)-$(date +%Y)
 
@@ -48,9 +49,9 @@ echo "List of packages generated"
 
 #copy all files in $HOME to the backup directory
 echo "Copying files into backup directory: $backupdir"
-for file in $HOME/*
+for file in $backupsrc
 do
-	[[ "$file" = "$backupdir" ]] && continue
+	[[ "$file" = $backupdir ]] && continue
 	echo "$file"
 	cp -a "$file" $backupdir
 done
