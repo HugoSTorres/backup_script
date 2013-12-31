@@ -26,11 +26,6 @@ shopt -s dotglob
 
 #check the date used for the archive name is correct
 echo "Running backup_script.sh on: $backupdate"
-echo "Is the date correct? 'Y' or 'N'"
-read datecorrect
-if [ $datecorrect = "N" ] || [ $datecorrect = "n" ]; then
-	exit	
-fi
 
 #check if the backup directory exists
 echo "Checking for backup directory"
