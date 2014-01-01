@@ -3,7 +3,7 @@ backup_script
 
 Simple script that facilitates making backup archives written in Bash.
 
-As of writing the script, I'm using Arch Linux (although I change distros)
+As of writing the script, I'm using Arch Linux (although I change distros
 often so I wouldn't be surprised if this changes). It's designed to copy
 all of the current user's $HOME into a directory, make a gzipped tarball
 out of it, and then delete the directory used to make the tarball. From
