@@ -18,9 +18,9 @@
 # License along with this program.  If not, see 
 # <http://www.gnu.org/licenses/>.
 
-backupsrc=$HOME/*
-backupdir=$HOME/Backup
 backupdate=$(date +%m)-$(date +%d)-$(date +%Y)
+backupsrc=$HOME/*
+backupdir="$HOME/Backup_$backupdate"
 
 shopt -s dotglob
 
@@ -54,7 +54,8 @@ echo "Done copying files into backup directory"
 
 #create the backup tarball
 echo "Creating backup archive"
-tar -czf $HOME/backup_"$backupdate".tar.gz "$backupdir"
+cd $HOME
+tar -czf backup_"$backupdate".tar.gz Backup_$backupdate/
 echo "Backup archive successfully created"
 
 #remove the copied contents
